@@ -22,7 +22,7 @@ def render_to_response(template_name, dictionary=None, context_instance=None,
     :returns: A response object with the evaluated template as a payload.
     """
     rendered = render_to_string(template_name, dictionary, context_instance)
-    return HttpResponse(rendered, mimetype=mimetype)
+    return HttpResponse(rendered, content_type=mimetype)
 
 
 def render(request, *args, **kwargs):
